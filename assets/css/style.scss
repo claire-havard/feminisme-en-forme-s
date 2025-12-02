@@ -2,6 +2,7 @@
 @use "_functions" as *;
 @use "_mixins" as *;
 
+
 // Reset
 body{
 	margin: 0;
@@ -24,6 +25,7 @@ ul{
 	list-style-type: none;
 }
 
+// Début du style
 .main{
 	position: relative;
 	width: 100%;

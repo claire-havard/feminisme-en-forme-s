@@ -3,6 +3,7 @@
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 999;
   display: flex;
   flex-wrap: wrap;
 }
@@ -175,7 +176,6 @@
     flex-direction: row;
     align-items: baseline;
     justify-content: space-between;
-    z-index: 1;
   }
   .header .menu .main-menu .link {
     text-align: center;

@@ -2,12 +2,12 @@
 @use "_functions" as *;
 @use "_mixins" as *;
 
-
 .header{
 	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
+	z-index: 999;
 	display: flex;
 	flex-wrap: wrap;
 
@@ -101,7 +101,7 @@
 				}
 
 				&::before{
-					@include before-line;
+					@include before-line();
 				}
 			}
 			
@@ -123,7 +123,7 @@
 			}
 
 			#collectif::after{
-				@include before-line;
+				@include before-line();
 				top: unset;
 				bottom: 0;
 			}
@@ -199,7 +199,6 @@
 				flex-direction: row;
 				align-items: baseline;
 				justify-content: space-between;
-				z-index: 1;
 				
 				.link{
 					text-align: center;
