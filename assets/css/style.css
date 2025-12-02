@@ -16,12 +16,21 @@ ul {
   list-style-type: none;
 }
 
+.bold {
+  font-weight: 700;
+}
+
 .main {
   position: relative;
   width: 100%;
   box-sizing: border-box;
   margin-top: 5.125em;
   padding: 0 1.875em;
+}
+.main .manifest .labeur {
+  font-size: 1.125em;
+  line-height: 1.35;
+  margin: 0 0 0.9375em;
 }
 
 @media screen and (min-width: 767.5px) {
@@ -32,5 +41,13 @@ ul {
     margin: 15em auto 0;
     padding: 0 6.875em;
     max-width: 1920px;
+  }
+  .main .manifest {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5em;
+  }
+  .main .manifest .labeur {
+    font-size: 1.5em;
   }
 }/*# sourceMappingURL=style.css.map */

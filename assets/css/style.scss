@@ -25,6 +25,11 @@ ul{
 	list-style-type: none;
 }
 
+// Stylisation du texte
+.bold{
+	font-weight: 700;
+}
+
 // Début du style
 .main{
 	position: relative;
@@ -32,6 +37,14 @@ ul{
 	box-sizing: border-box;
 	margin-top: pxToEm(82);
 	padding: 0 pxToEm(30);
+
+	.manifest{
+		.labeur{
+			font-size: pxToEm(18);
+			line-height: 1.35;
+			margin: 0 0 pxToEm(15);
+		}
+	}
 }
 
 @media screen and (min-width: map-get($breakpoints, "desk")){
@@ -43,5 +56,15 @@ ul{
 		margin: pxToEm(240) auto 0;
 		padding: 0 pxToEm(110);
 		max-width: 1920px;
+
+		.manifest{
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: pxToEm(40);
+
+			.labeur{
+				font-size: pxToEm(24);
+			}
+		}
 	}
 }
