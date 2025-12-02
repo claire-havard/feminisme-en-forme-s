@@ -1,0 +1,31 @@
+@use "_variables" as *;
+@use "_functions" as *;
+@use "_mixins" as *;
+
+// Reset
+body{
+	margin: 0;
+	background-color: $fake-white;
+	font-family: "Syne", sans-serif;
+	font-size: clamp(10px, pxToVw(16), 22px);
+
+}
+
+a{
+	&:link, &:visited, &:hover, &:active{
+		text-decoration: none;
+		color: initial;
+	}
+}
+
+ul{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+@media screen and (min-width: map-get($breakpoints, "desk")){
+	body{
+		font-size: clamp(14px, pxToVw(16, "desktop"), 22px);
+	}
+}
