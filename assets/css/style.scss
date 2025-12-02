@@ -24,8 +24,22 @@ ul{
 	list-style-type: none;
 }
 
+.main{
+	position: relative;
+	width: 100%;
+	box-sizing: border-box;
+	margin-top: pxToEm(82);
+	padding: 0 pxToEm(30);
+}
+
 @media screen and (min-width: map-get($breakpoints, "desk")){
 	body{
 		font-size: clamp(14px, pxToVw(16, "desktop"), 22px);
+	}
+
+	.main{
+		margin: pxToEm(240) auto 0;
+		padding: 0 pxToEm(110);
+		max-width: 1920px;
 	}
 }
