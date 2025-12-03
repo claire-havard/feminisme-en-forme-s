@@ -1,15 +1,15 @@
 window.addEventListener("DOMContentLoaded", function () {
 	// Ouverture menu burger
 	const menuBurger = document.querySelector("#menu-burger");
-	const mainMenu   = document.querySelector(".menu");
+	const mainMenu = document.querySelector(".menu");
 	const pictoBurger = document.querySelector(".picto.burger");
-	const pictoCross  = document.querySelector(".picto.cross");
+	const pictoCross = document.querySelector(".picto.cross");
 
 	menuBurger.addEventListener("click", () => {
 		const isOpen = mainMenu.classList.toggle("visible");
-		
+
 		pictoBurger.classList.toggle("actived", !isOpen);
-		pictoCross.classList.toggle("actived",  isOpen);
+		pictoCross.classList.toggle("actived", isOpen);
 
 		// Fermer le sous-menu en même temps
 		if (!isOpen) {
@@ -23,6 +23,14 @@ window.addEventListener("DOMContentLoaded", function () {
 	const slogans = document.querySelectorAll(".manifester");
 	const subMenu = document.querySelector(".sub-menu");
 	const icone = document.querySelector("#manifester .icone");
+
+	// Pour que le menu s'ouvre en mobile
+	if (window.innerWidth < 768) {
+		const menuStyles = window.getComputedStyle(menu);
+		if (menuStyles.display === "none") {
+			menu.classList.add("visible");
+		}
+	}
 
 	slogans.forEach(slogan => {
 		slogan.addEventListener("click", () => {
