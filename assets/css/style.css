@@ -16,6 +16,10 @@ ul {
   list-style-type: none;
 }
 
+button {
+  font-family: inherit;
+}
+
 .bold {
   font-weight: 700;
 }
