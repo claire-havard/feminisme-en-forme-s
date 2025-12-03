@@ -24,8 +24,10 @@ window.addEventListener("DOMContentLoaded", function () {
 	const subMenu = document.querySelector(".sub-menu");
 	const icone = document.querySelector("#manifester .icone");
 
-	slogan.addEventListener("click", () => {
-		subMenu.classList.toggle("visible");
-		icone.classList.toggle("opened");
+	slogans.forEach(slogan => {
+		slogan.addEventListener("click", () => {
+			subMenu.classList.toggle("visible");
+			icone.classList.toggle("opened");
+		});
 	});
 });
