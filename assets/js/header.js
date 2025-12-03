@@ -26,9 +26,9 @@ window.addEventListener("DOMContentLoaded", function () {
 
 	// Pour que le menu s'ouvre en mobile
 	if (window.innerWidth < 768) {
-		const menuStyles = window.getComputedStyle(menu);
+		const menuStyles = window.getComputedStyle(mainMenu);
 		if (menuStyles.display === "none") {
-			menu.classList.add("visible");
+			mainMenu.classList.add("visible");
 		}
 	}
 
