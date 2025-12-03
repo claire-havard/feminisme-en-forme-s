@@ -66,6 +66,22 @@ button {
   content: "";
   height: 0.09375em;
   width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #101010;
+}
+.main .extern-link:hover, .main .extern-link:active {
+  background-color: #101010;
+  color: white;
+}
+.main .extern-link .ext-icon {
+  display: inline-block;
+  position: relative;
+}
+.main .extern-link .ext-icon svg {
+  height: 100%;
+  width: 100%;
 }
 .main .manifeste, .main .collectif {
   width: 100%;

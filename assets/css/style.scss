@@ -81,6 +81,25 @@ button{
 			content: "";
 			height: pxToEm(1.5);
 			width: 100%;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			background-color: $title-black;
+		}
+
+		&:hover, &:active{
+			background-color: $title-black;
+			color: white;
+		}
+
+		.ext-icon{
+			display: inline-block;
+			position: relative;
+			
+			svg{
+				height: 100%;
+				width: 100%;
+			}
 		}
 	}
 
