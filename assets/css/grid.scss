@@ -1,0 +1,179 @@
+@use "_variables" as *;
+@use "_functions" as *;
+@use "_mixins" as *;
+
+
+.desk-only{
+	display: none;
+}
+
+.consign{
+	padding: $main-top $main-side pxToEm(15);
+	
+	h3{
+		font-size: pxToEm(24);
+		text-transform: uppercase;
+		margin: 0;
+	}
+	p{
+		margin: 0;
+	}
+}
+
+.flyer{
+	padding: 0 $main-side;
+	width: 100%;
+	position: relative;
+	box-sizing: border-box;
+
+	canvas{
+		background-color: $rose;
+		width: 100%;
+	}
+}
+
+.keyboard{
+	padding: pxToEm(15) $main-side;
+	display: flex;
+	flex-direction: row;
+	align-items: baseline;
+	justify-content: center;
+	gap: pxToEm(50);
+
+	.key{
+		button{
+			display: inline-block;
+			font-weight: 700;
+			font-size: pxToEm(24);
+			line-height: 0.9;
+			padding: pxToEm(15, 24);
+			border-radius: 0;
+			background-color: $jaune;
+			border: solid pxToEm(1.5, 24) $title-black;
+			color: $title-black;
+			width: pxToEm(55,24);
+		}
+		p{
+			text-align: center;
+			margin: pxToEm(5) 0;
+		}
+	}
+}
+
+
+.article{
+	margin-top: pxToEm(30);
+	padding: pxToEm(50) $main-side;
+	box-sizing: border-box;
+	width: 100%;
+	background-color: $light-grey;
+
+	.title-slogan{
+		font-size: pxToEm(40);
+		line-height: 0.9;
+		font-size: 700;
+		text-transform: uppercase;
+		margin: 0 0 pxToEm(20,40);
+	}
+
+	.labeur-article{
+		font-size: pxToEm(16);
+		margin: 0 0 pxToEm(15);
+	}
+}
+
+@media screen and (min-width: map-get($breakpoints, "desk")){
+	.desk-only{
+		display: initial;
+	}
+		
+	.main-grid{
+		display: grid;
+		grid-template-columns: 1fr 1.5fr;
+		grid-template-areas: 
+			'flyer consign'
+			'flyer keyboard'
+			'flyer article';
+	}
+
+	.consign{
+		grid-area: consign;
+		background-color: $light-grey;
+		padding: $main-top pxToEm(62) 0;
+	}
+
+	.keyboard{
+		grid-area: keyboard;
+		background-color: $light-grey;
+		justify-content: flex-start;
+		gap: pxToEm(50);
+		padding: pxToEm(15) pxToEm(62);
+
+		button{
+			&:hover, &:active{
+				background-color: $title-black;
+				color: white;
+				cursor: pointer;
+			}
+		}
+	}
+
+	.flyer{
+		padding: 0;
+		grid-area: flyer;
+		max-width: pxToEm(580);
+	}
+
+	.article{
+		grid-area: article;
+		padding: pxToEm(20) pxToEm(62) $main-bottom;
+		margin-block: 0;
+
+		.nav{
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-between;
+			font-weight: 700;
+
+			.link{
+				text-transform: uppercase;
+				&:hover, &:active{
+					background-color: $title-black;
+					color: white;
+				}
+
+				.inner-link{
+					display: flex;
+					flex-direction: row;
+					align-items: center;
+
+					.text{
+						margin: 0.5em 0;
+					}
+
+					.lincon{
+						width: pxToEm(32);
+						height: pxToEm(32);
+	
+						svg{
+							height: 100%;
+							width: 100%;
+						}
+					}
+				}
+
+			}
+
+		}
+
+		.title-slogan{
+			font-size: pxToVw(86, "desktop");
+			margin: pxToEm(30, 86) 0;
+		}
+
+		.labeur-article{
+			max-width: pxToEm(590);
+		}
+	}
+}

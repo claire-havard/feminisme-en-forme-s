@@ -1,3 +1,6 @@
+@use "_functions" as *;
+@use "_mixins" as *;
+
 // Couleurs
 $jaune: #FCFF74;
 $violet: #7D6EFF;
@@ -11,3 +14,13 @@ $middle-grey: #D9D9D9;
 $dark-grey: #202020;
 $fake-black: #141414;
 $title-black: #101010;
+
+// Espacements
+$main-top: pxToEm(80);
+$main-side: pxToEm(30);
+$main-bottom: pxToEm(60);
+
+@media screen and (min-width: map-get($breakpoints, "desk")){
+    $main-top: pxToEm(90);
+    $main-side: pxToEm(110);
+}

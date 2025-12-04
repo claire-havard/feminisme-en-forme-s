@@ -24,7 +24,7 @@ $breakpoints: (
 
 // Marges du .main en mobiles et desktop
 @mixin main-marges($media: "mobs"){
-	margin: pxToEm(82) 0;
+	margin: pxToEm(80) 0;
 	padding: 0 pxToEm(30);
 
 	@if $media == "desk"{

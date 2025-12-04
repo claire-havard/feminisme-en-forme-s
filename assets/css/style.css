@@ -40,7 +40,7 @@ button {
   position: relative;
   width: 100%;
   box-sizing: border-box;
-  margin: 5.125em 0;
+  margin: 5em 0;
   padding: 0 1.875em;
 }
 .main .labeur {
@@ -109,7 +109,7 @@ button {
     font-size: clamp(13px, 1.1111111111vw, 22px);
   }
   .main {
-    margin: 5.125em 0;
+    margin: 5em 0;
     padding: 0 1.875em;
     margin: 5.625em auto 3.75em;
     padding: 0 6.875em;
