@@ -52,6 +52,10 @@
 			border: solid pxToEm(1.5, 24) $title-black;
 			color: $title-black;
 			width: pxToEm(55,24);
+
+			&:active{
+				background-color: #f8f9b1;
+			}
 		}
 		p{
 			text-align: center;

@@ -45,6 +45,9 @@
   color: #101010;
   width: 2.2916666667em;
 }
+.keyboard .key button:active {
+  background-color: #f8f9b1;
+}
 .keyboard .key p {
   text-align: center;
   margin: 0.3125em 0;
